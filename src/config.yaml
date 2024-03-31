@@ -11,7 +11,7 @@ metadata:
   title:
     default: QVector
     template: '%s — QVector'
-  description: "See your data differently with QVector's financial data embeddings."
+  description: "Explore new trading and investment strategies with cutting edge embedding models"
   robots:
     index: true
     follow: true
