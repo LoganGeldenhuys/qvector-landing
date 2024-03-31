@@ -11,7 +11,7 @@ metadata:
   title:
     default: QVector
     template: '%s — QVector'
-  description: "\U0001F680 See your data differently with QVector's financial data embeddings."
+  description: "See your data differently with QVector's financial data embeddings."
   robots:
     index: true
     follow: true
