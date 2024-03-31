@@ -2,9 +2,9 @@
 import { getPermalink } from './utils/permalinks';
 
 
-export const headerData = {}
-// export const headerData = {
-//   links: [
+
+export const headerData = {
+  links: [
 //     {
 //       text: 'Homes',
 //       links: [
@@ -117,9 +117,10 @@ export const headerData = {}
 //       text: 'Widgets',
 //       href: '#',
 //     },
-//   ],
-//   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
-// };
+  ],
+  actions: [],
+  // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+};
 
 export const footerData = {
   links: [
