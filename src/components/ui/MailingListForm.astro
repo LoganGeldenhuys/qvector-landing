@@ -85,13 +85,18 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     )
   }
 
+  <!-- Placeholder for the success message -->
+  <div id="successMessage" class="hidden mt-3 text-center text-green-500">
+    <p>You've been succesfully added to the waitlist!</p>
+  </div>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('myForm');
     form?.addEventListener('submit', function (e) {
       e.preventDefault(); // Prevent the default form submission
 
-      const formData = new FormData(form as HTMLFormElement);
+      const formData = new FormData(this as HTMLFormElement);
       const data = Object.fromEntries(formData.entries());
 
       fetch('https://puptc4a8u0.execute-api.us-east-2.amazonaws.com/default/signup-mailinglist', {
@@ -104,11 +109,13 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data);
-        // Handle success (e.g., show a success message)
+        // Show success message
+        document.getElementById('successMessage')?.classList.remove('hidden');
+        (this as HTMLFormElement).reset(); 
       })
       .catch((error) => {
         console.error('Error:', error);
-        // Handle error (e.g., show an error message)
+        // Optionally handle errors
       });
     });
   });
